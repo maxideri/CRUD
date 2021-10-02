@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .oculto {
+      display: none;
+    }
+    .contenedor {
+      display: flex;
+      flex-direction: column;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #btnCreate {
+      max-width: 200px;
+      margin-bottom: 1.5em;
+    }
+
+    tr:nth-child(even) {
+      background: #DDD
+    }
+    tr:nth-child(odd) {
+      background: #FFF
+    }
+  
+    form {
+      border: 2px solid gray;
+      padding: 6px;
+      margin-bottom: 1.5em;
+    }
+    form label {
+      display: block;
+      margin: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <form name="frmProducto" class="oculto">
+      <input type="hidden" name="id">
+
+      <label>
+        Nombre del producto
+        <input type="text" name="nombre">
+      </label>
+      <label>
+        Precio del producto
+        <input type="text" name="precio">
+      </label>
+
+      <button>Guardar</button>
+    </form>
+
+    <button id="btnCreate">Nuevo Producto</button>
+
+    <table id="tblProductos">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th colspan="2">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>test</td>
+          <td>test</td>      
+          <td><i data-id="id" class="fa fa-pencil"></i></td>
+          <td><i data-id="id" class="fa fa-trash"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</body>
+
+<script src ="app.js"></script>
+
+</html>
